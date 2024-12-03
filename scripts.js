@@ -37,6 +37,11 @@ async function loadBlogs() {
     });
 }
 
+document.getElementById('carbonCalculator').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert("Carbon footprint calculation coming soon!");
+});
+
 async function deleteBlog(blogId) {
     const response = await fetch(`/api/blogs/${blogId}`, { method: "DELETE" });
 
