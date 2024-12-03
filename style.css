@@ -1,138 +1,100 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
 }
+
 /* Header */
 .main-header {
     background-color: #007bff;
-    color: #fff;
+    /* Updated Header Color */
+    color: white;
+    text-align: center;
     padding: 2rem 0;
-    text-align: center;
 }
 
-.main-header h1 {
-    font-size: 2.5rem;
+/* Info Section */
+.info-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
 }
 
-.main-header p {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
+.info-section h2 {
+    color: #333;
 }
 
-/* Content Section */
-.content-selection {
-    padding: 2rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+.info-section ul {
+    list-style: square;
+    padding-left: 1.5rem;
 }
 
-.content-selection .card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.content-selection .card:hover {
-    transform: translateY(-10px);
-}
-
-.content-selection img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.content-section .container {
-    max-width: 1200px;
-    margin: auto;
-    border: 1px;
-    text-align: center;
-}
-
-.content-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.content-grid {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Cards */
-.card {
+/* Calculator Section */
+.calculator-section {
+    padding: 2rem;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
+}
+
+.calculator-section h2 {
+    color: #333;
     text-align: center;
-    width: 300px;
 }
 
-.card h3 {
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row label {
+    font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #007bff;
+    display: block;
 }
 
-.card p {
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.card .btn {
-    display: inline-block;
-    text-decoration: none;
-    background-color: #007bff;
-    color: #fff;
-    padding: 0.5rem 1rem;
+.form-row input,
+.form-row select {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 0.9rem;
-    transition: background-color 0.3s;
 }
 
-.card .btn:hover {
+.form-row button {
+    grid-column: span 2;
+    background-color: #007bff;
+    /* Primary Button Color */
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 5px;
+}
+
+.form-row button:hover {
     background-color: #0056b3;
+    /* Hover Effect */
 }
 
-
-/* Ensure wrapper grows and takes up remaining space */
-.wrapper {
-    flex: 1;
-}
-
-/* Footer styling */
+/* Footer */
 .main-footer {
     background-color: #333;
-    color: #fff;
+    /* Updated Footer Color */
+    color: white;
     text-align: center;
     padding: 1rem 0;
+    margin-top: auto;
+    /* Push footer to the bottom */
 }
 
 .main-footer a {
-    color: #fff;
+    color: #007bff;
+    /* Footer Link Color */
     text-decoration: none;
 }
 
@@ -140,49 +102,21 @@ body {
     text-decoration: underline;
 }
 
-/* Contact Form Section */
-.contact-section {
-    padding: 2rem 0;
-}
-
-.contact-section .container {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-}
-
-.contact-form {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact-form label {
+/* Footer Button */
+.main-footer button {
+    background-color: white;
+    /* Footer Button Background */
+    color: #007bff;
+    /* Footer Button Text Color */
+    border: 1px solid #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     font-weight: bold;
-    text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-form button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: #0056b3;
+.main-footer button:hover {
+    background-color: #007bff;
+    /* Footer Button Hover */
+    color: white;
 }
