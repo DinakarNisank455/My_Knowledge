@@ -98,7 +98,9 @@ body {
     padding: 1rem 0;
     text-align: center;
 }
-
+.main-footer button{
+    color: #fff;
+}
 .main-footer p {
     font-size: 0.9rem;
 }
