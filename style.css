@@ -1,26 +1,79 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
-header,
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header.hero {
+    position: relative;
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+header.hero .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+header.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header.hero nav {
+    margin-top: 1.5rem;
+}
+
+header.hero .nav-link {
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+header.hero .nav-link:hover {
+    background: #0056b3;
+}
+
+main .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.features .feature {
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.features .feature h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 1rem 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-}
-
-main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
 }
