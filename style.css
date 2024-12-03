@@ -37,6 +37,7 @@ body {
 .content-section .container {
     max-width: 1200px;
     margin: auto;
+    border: 1px;
     text-align: center;
 }
 
