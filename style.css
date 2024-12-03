@@ -11,7 +11,6 @@ body {
 /* Header */
 .main-header {
     background-color: #007bff;
-    /* Updated Header Color */
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -67,34 +66,30 @@ body {
 .form-row button {
     grid-column: span 2;
     background-color: #007bff;
-    /* Primary Button Color */
     color: white;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
     padding: 0.8rem;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .form-row button:hover {
     background-color: #0056b3;
-    /* Hover Effect */
 }
 
 /* Footer */
 .main-footer {
     background-color: #333;
-    /* Updated Footer Color */
     color: white;
     text-align: center;
     padding: 1rem 0;
     margin-top: auto;
-    /* Push footer to the bottom */
+    /* Pushes footer to the bottom of the page */
 }
 
 .main-footer a {
     color: #007bff;
-    /* Footer Link Color */
     text-decoration: none;
 }
 
@@ -104,19 +99,15 @@ body {
 
 /* Footer Button */
 .main-footer button {
-    background-color: white;
-    /* Footer Button Background */
-    color: #007bff;
-    /* Footer Button Text Color */
-    border: 1px solid #007bff;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+    padding: 0.6rem 1rem;
     font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .main-footer button:hover {
-    background-color: #007bff;
-    /* Footer Button Hover */
-    color: white;
+    background-color: #ccc;
 }
