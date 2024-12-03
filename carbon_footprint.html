@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function calculateFootprint() {
+            const energy = parseFloat(document.getElementById('energy').value) || 0;
+            const transport = parseFloat(document.getElementById('transport').value) || 0;
+            const diet = parseFloat(document.getElementById('diet').value) || 0;
+            const waste = parseFloat(document.getElementById('waste').value) || 0;
+
+            const total = (energy * 1.37) + (transport * 2.31) + (diet * 0.9) + (waste * 0.25);
+
+            document.getElementById('result').innerText =
+                `Your annual carbon footprint is approximately ${total.toFixed(2)} metric tons of CO₂.`;
+        }
+    </script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Carbon Footprint Calculator</h1>
+            <p>Understand and calculate your carbon footprint.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="info-section">
+            <div class="container">
+                <h2>What is a Carbon Footprint?</h2>
+                <p>A carbon footprint is the total greenhouse gas emissions caused by an individual, organization, or
+                    product, expressed as carbon dioxide equivalent (CO₂e). Activities such as energy consumption,
+                    transportation, diet, and waste generation contribute to your carbon footprint.</p>
+                <p><strong>Global Average:</strong> The global average carbon footprint per person is approximately 4.5
+                    metric tons of CO₂ annually. In developed countries, this number can be significantly higher.</p>
+                <img src="images/carbon-footprint.jpg" alt="Carbon footprint illustration" class="content-image">
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <div class="container">
+                <h2>Calculate Your Carbon Footprint</h2>
+                <form onsubmit="event.preventDefault(); calculateFootprint();" class="carbon-form">
+                    <label for="energy">Monthly energy consumption (kWh):</label>
+                    <input type="number" id="energy" placeholder="Enter your energy usage" required>
+
+                    <label for="transport">Monthly vehicle travel (miles):</label>
+                    <input type="number" id="transport" placeholder="Enter miles driven" required>
+
+                    <label for="diet">Dietary preferences (kg of meat per week):</label>
+                    <input type="number" id="diet" placeholder="Enter weekly meat consumption" required>
+
+                    <label for="waste">Monthly waste generated (kg):</label>
+                    <input type="number" id="waste" placeholder="Enter waste produced" required>
+
+                    <button type="submit" class="btn">Calculate</button>
+                </form>
+                <p id="result" class="result"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 Your Blog Name. All Rights Reserved. | <a href="about.html">About Us</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
