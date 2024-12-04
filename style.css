@@ -24,22 +24,19 @@
 .navbar a:hover {
     color: #00bfff;
 }
-
+.button{
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 /* Header */
 .main-header {
     background-color: #007bff;
     color: #fff;
-    padding: 2rem 0;
+    padding: 10px;
     text-align: center;
-}
-
-.main-header h1 {
-    font-size: 2.5rem;
-}
-
-.main-header p {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
 }
 
 body {
@@ -61,6 +58,7 @@ body {
     border: 1px;
     text-align: center;
 }
+
 /* Content Section */
 .content-selection {
     padding: 2rem 0;
@@ -92,9 +90,8 @@ body {
 
 .content-section .container {
     max-width: 1200px;
-    padding: auto;
+    padding: 10px;
     margin: auto;
-    border: 1px;
     text-align: center;
 }
 
@@ -105,7 +102,7 @@ body {
 
 .content-grid {
     display: flex;
-    gap: 2rem;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -159,6 +156,7 @@ body {
     color: #fff;
     text-align: center;
     padding: 8px 0;
+    margin-top: auto
 }
 
 .main-footer a {
@@ -298,18 +296,21 @@ body {
     height: auto;
     border-radius: 5px;
 }
+/*carbon Footprint*/
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .form-row {
-        grid-template-columns: 1fr;
-    }
+.carbon-calculator{
+    max-width:500px;
+    margin: auto;
+    padding: 10px;
+    gap: 20px;
+    border: 1px solid #333;
+}
 
-    .main-header {
-        padding: 1rem;
-    }
-
-    .calculator-container {
-        padding: 1.5rem;
-    }
+.carbon-container{
+        max-width: 1200px;
+        gap: 20px;
+        padding: 10px;
+        margin: auto;
+        border: 1px solid black;
+        text-align: auto;
 }
