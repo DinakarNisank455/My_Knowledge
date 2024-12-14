@@ -6,19 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon Footprint Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function calculateFootprint() {
-            const energy = parseFloat(document.getElementById('energy').value) || 0;
-            const transport = parseFloat(document.getElementById('transport').value) || 0;
-            const diet = parseFloat(document.getElementById('diet').value) || 0;
-            const waste = parseFloat(document.getElementById('waste').value) || 0;
-
-            const total = (energy * 1.37) + (transport * 2.31) + (diet * 0.9) + (waste * 0.25);
-
-            document.getElementById('result').innerText =
-                `Your annual carbon footprint is approximately ${total.toFixed(2)} metric tons of CO₂.`;
-        }
-    </script>
 </head>
 
 <body>
@@ -27,6 +14,7 @@
     </header>
     <main>
         <section class="content-section">
+            <div class="container">
                 <h2>What is a Carbon Footprint?</h2>
                 <p>A carbon footprint is the total greenhouse gas emissions caused by an individual, organization, or
                     product, expressed as carbon dioxide equivalent (CO₂e). Activities such as energy consumption,
@@ -51,36 +39,40 @@
                     <b>Waste Management:</b> Accounts for waste generation and recycling practices.
                 </li>
             </ul>
+            </div>
         </section>
 
         <section class="carbon-calculator">
             <h2>Carbon Footprint Calculator</h2>
             <form id="carbonCalculator" class="form-row">
                 <label for="transport">Transportation (km/week):</label>
-                <input type="number" id="transport" name="transport" min="0" placeholder="e.g., 50" >
-
+                <input type="number" id="transport" name="transport" min="0" placeholder="e.g., 50">
+        
                 <label for="energy">Electricity Usage (kWh/month):</label>
-                <input type="number" id="energy" name="energy" min="0" placeholder="e.g., 300" >
-
-                <label for="diet">Diet (meals/week):</label>
+                <input type="number" id="energy" name="energy" min="0" placeholder="e.g., 300">
+        
+                <label for="diet">Diet:</label>
                 <select id="diet" name="diet">
-                    <option value="low">Plant-based</option>
-                    <option value="medium">Mixed Diet</option>
-                    <option value="high">Meat-heavy</option>
+                    <option value="0.6">Plant-based</option>
+                    <option value="1.0">Mixed Diet</option>
+                    <option value="2.0">Meat-heavy</option>
                 </select>
-
+        
                 <label for="waste">Waste Generated (kg/week):</label>
-                <input type="number" id="waste" name="waste" min="0" placeholder="e.g., 10" >
-
-                <button type="submit">Calculate</button>
+                <input type="number" id="waste" name="waste" min="0" placeholder="e.g., 10">
+        
+                <button type="submit" id="calculateBtn">Calculate</button>
             </form>
             <p id="result" class="result"></p>
         </section>
+
     </main>
     <footer class="main-footer">
-        <p>© 2024 My_Knowledge. All Rights Reserved. | <a href="contact.html">Get in Touch</a> 
+        <p>© 2024 My_Knowledge. All Rights Reserved. | <a href="contact.html">Get in Touch</a>
             | <a href="about.html">About Us</a></p>
     </footer>
+        <script src="script.js"></script>
+
 </body>
 
 </html>
