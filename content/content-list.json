@@ -1,0 +1,27 @@
+[
+    {
+        "title": "CARBON FOOTPRINT",
+        "description": "Description pending.",
+        "file": "carbon_footprint.html"
+    },
+    {
+        "title": "COOKIES",
+        "description": "Description pending.",
+        "file": "cookies.html"
+    },
+    {
+        "title": "MARKOV DECISION PROCESSES",
+        "description": "Description pending.",
+        "file": "Markov Decision Processes.html"
+    },
+    {
+        "title": "Q LEARNING",
+        "description": "Description pending.",
+        "file": "q_learning.html"
+    },
+    {
+        "title": "REINFORCEMENT LEARNING",
+        "description": "Description pending.",
+        "file": "reinforcement_learning.html"
+    }
+]

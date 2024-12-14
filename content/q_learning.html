@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Understanding Q-Learning</h1>
+    </header>
+    <main>
+        <section class="blog-section">
+            <div class="container">
+                <h2>What is Q-Learning?</h2>
+                <p>
+                    Q-Learning is an off-policy reinforcement learning algorithm used to find the optimal action-selection policy for any given finite Markov Decision Process. It relies on the concept of a Q-value, which measures the expected utility of an action taken in a given state.
+                </p>
+                <h3>Mathematics of Q-Learning:</h3>
+                <p>
+                    The Q-value is updated using the formula:
+                    <br>
+                    Q(s, a) = Q(s, a) + α [r + γ max(Q(s', a')) - Q(s, a)]
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <p>© 2024 Content Explorer | <a href="contact.html">Contact Us</a> | <a href="about.html">About Us</a></p>
+    </footer>
+</body>
+</html>
