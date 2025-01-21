@@ -121,6 +121,7 @@ body {
 .content-section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+        text-align: center;
 }
 
 .content-section ul {
@@ -180,6 +181,7 @@ body {
     border: 1px solid #ddd;
     transition: background-color 0.3s;
 }
+
 form.form-row {
     max-width: 400px;
     margin: 0 auto;
@@ -213,7 +215,6 @@ form.form-row button {
     width: 100%;
     padding: 10px;
     background-color: #3498db;
-    /* Blue background */
     color: #fff;
     font-weight: bold;
     border: none;
@@ -224,21 +225,37 @@ form.form-row button {
 
 form.form-row button:hover {
     background-color: #2980b9;
-    /* Darker blue on hover */
 }
+
 .result {
     font-size: 1.2em;
     font-weight: bold;
     color: #2c3e50;
-    /* Dark slate color for readability */
     margin-top: 15px;
     padding: 10px;
     background-color: #ecf0f1;
-    /* Light gray background for emphasis */
     border: 1px solid #bdc3c7;
-    /* Border to make the result stand out */
     border-radius: 5px;
     text-align: center;
+}
+.impact {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #4caf50;
+    /* Green for low footprint */
+}
+
+.impact.high {
+    background-color: #f44336;
+    /* Red for high footprint */
+}
+
+.impact.average {
+    background-color: #ff9800;
+    /* Orange for average footprint */
 }
 
 /* Contact Form */

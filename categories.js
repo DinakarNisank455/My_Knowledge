@@ -1,9 +1,4 @@
-// Categories and their content
-const categories = {
-    technology: ["cookies", "ai"],
-    automobiles: ["tesla", "ev"],
-    history: ["world_war", "renaissance"]
-};
+
 
 // Render categories
 function renderCategories() {
